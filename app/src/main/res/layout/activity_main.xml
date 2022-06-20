@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipCalculatorActivity">
+
+    <!-- Check amount Label and Party size Label -->
+    <TextView
+        android:id="@+id/checkAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:text="Check amount:"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/partySizeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="32dp"
+        android:text="Party size:"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@id/checkAmountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmountLabel" />
+
+    <!-- button -->
+
+    <Button
+        android:id="@+id/buttonCompute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:text="Compute Tip"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@+id/partySizeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/partySizeValue" />
+
+    <!-- Tip Labels -->
+
+    <TextView
+        android:id="@+id/tipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Tip:"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/checkAmountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCompute" />
+
+    <TextView
+        android:id="@+id/fifteenTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="15%"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintBaseline_toBaselineOf="@id/tipLabel"
+        app:layout_constraintStart_toEndOf="@+id/tipLabel" />
+
+    <TextView
+        android:id="@+id/twentyTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:text="20%"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@+id/fifteenTipLabel"
+        app:layout_constraintBaseline_toBaselineOf="@id/tipLabel" />
+
+    <TextView
+        android:id="@+id/twentyfiveTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:text="25%"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@+id/twentyTipLabel"
+        app:layout_constraintBaseline_toBaselineOf="@id/tipLabel" />
+
+    <!-- Total Labels -->
+
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Total:"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/checkAmountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tipLabel" />
+
+    <TextView
+        android:id="@+id/fifteenTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15%"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintBaseline_toBaselineOf="@id/totalLabel"
+        app:layout_constraintStart_toStartOf="@+id/fifteenTipLabel" />
+
+    <TextView
+        android:id="@+id/twentyTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:text="20%"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintBaseline_toBaselineOf="@id/totalLabel"
+        app:layout_constraintStart_toEndOf="@+id/fifteenTotalLabel" />
+
+    <TextView
+        android:id="@+id/twentyfiveTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:text="25%"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@+id/twentyTotalLabel"
+        app:layout_constraintBaseline_toBaselineOf="@id/totalLabel" />
+
+    <!-- Check Amount Value and Party Size Value -->
+
+    <EditText
+        android:id="@+id/checkAmountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/checkAmountLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkAmountLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="130.45" />
+
+    <EditText
+        android:id="@+id/partySizeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/partySizeLabel"
+        app:layout_constraintEnd_toEndOf="@id/checkAmountValue"
+        app:layout_constraintStart_toStartOf="@id/checkAmountValue"
+        tools:text="4" />
+
+    <!-- Tip Values for 15%, 20%, 25% -->
+
+    <EditText
+        android:id="@+id/fifteenPercentTipValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="8"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tipLabel"
+        app:layout_constraintStart_toEndOf="@+id/fifteenTipLabel"
+        tools:text="100000" />
+
+    <EditText
+        android:id="@+id/twentyPercentTipValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tipLabel"
+        app:layout_constraintStart_toEndOf="@+id/twentyTipLabel"
+        tools:text="100000" />
+
+    <EditText
+        android:id="@+id/twentyfivePercentTipValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tipLabel"
+        app:layout_constraintStart_toEndOf="@+id/twentyfiveTipLabel"
+        tools:text="100000" />
+
+    <!-- Total Values for 15%, 20%, 25% -->
+
+    <EditText
+        android:id="@+id/fifteenPercentTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/totalLabel"
+        app:layout_constraintStart_toEndOf="@+id/fifteenTotalLabel"
+        tools:text="100000" />
+
+    <EditText
+        android:id="@+id/twentyPercentTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/totalLabel"
+        app:layout_constraintStart_toEndOf="@+id/twentyTotalLabel"
+        tools:text="100000" />
+
+    <EditText
+        android:id="@+id/twentyfivePercentTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/totalLabel"
+        app:layout_constraintStart_toEndOf="@+id/twentyfiveTotalLabel"
+        tools:text="100000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
